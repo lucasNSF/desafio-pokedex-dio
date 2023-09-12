@@ -1,0 +1,10 @@
+<input type="text" [(ngModel)]="value" />
+<button
+  [disabled]="!value"
+  matSuffix
+  mat-icon-button
+  aria-label="Search"
+  (click)="searchPokemon()"
+>
+  <mat-icon>search</mat-icon>
+</button>
