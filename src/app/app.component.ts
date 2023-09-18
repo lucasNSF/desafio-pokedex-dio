@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  standalone: true,
+  imports: [SearchBarComponent, CommonModule],
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'desafio';
-}
+export class AppComponent {}
