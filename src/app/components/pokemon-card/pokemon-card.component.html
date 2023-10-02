@@ -1,0 +1,16 @@
+<ng-container *ngIf="pokemon">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ pokemon.name }}</mat-card-title>
+      <mat-card-subtitle>{{ getPokemonTypes().join(", ") }}</mat-card-subtitle>
+    </mat-card-header>
+    <img matCardImage [src]="pokemon.sprites.front_default" />
+    <mat-card-content>
+      {{ 1 }}
+    </mat-card-content>
+    <mat-card-actions align="start">
+      <!-- <button mat-button (click)="onAction1">Action1</button> -->
+    </mat-card-actions>
+    <mat-card-footer> Footer </mat-card-footer>
+  </mat-card>
+</ng-container>
