@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { SnackbarService } from 'src/app/services/snackbar/snackbar.service';
 
 import { Pokemon } from 'src/app/models/Pokemon';
 import { PokeApiService } from 'src/app/services/poke-api/poke-api.service';
@@ -24,7 +25,10 @@ export class SearchBarComponent {
     },
   };
 
-  constructor(private pokeApiService: PokeApiService) {}
+  constructor(
+    private pokeApiService: PokeApiService,
+    private snackbarService: SnackbarService
+  ) {}
 
   handleKeyboardEvent({ key }: KeyboardEvent): void {
     if (this.keyboardEvents[key]) {
@@ -34,7 +38,11 @@ export class SearchBarComponent {
 
   async searchPokemon(): Promise<void> {
     if (!this.value) return;
-    const pokemon = await this.pokeApiService.getPokemon(this.value);
-    this.getPokemon.emit(pokemon);
+    try {
+      const pokemon = await this.pokeApiService.getPokemon(this.value);
+      this.getPokemon.emit(pokemon);
+    } catch (err) {
+      this.snackbarService.showErrorLog('Pokemon not found!');
+    }
   }
 }

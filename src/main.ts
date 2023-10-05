@@ -4,7 +4,11 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app/app.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 bootstrapApplication(AppComponent, {
-  providers: [importProvidersFrom(HttpClientModule), provideAnimations()],
+  providers: [
+    importProvidersFrom(HttpClientModule, MatSnackBarModule),
+    provideAnimations(),
+  ],
 }).catch((err) => console.error(err));
