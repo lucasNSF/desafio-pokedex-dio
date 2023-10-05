@@ -14,3 +14,15 @@
     font-weight: 600;
   }
 }
+
+@media screen and (max-width: 590px) {
+  .btn {
+    display: block;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  .bar {
+    margin-right: 0;
+  }
+}
