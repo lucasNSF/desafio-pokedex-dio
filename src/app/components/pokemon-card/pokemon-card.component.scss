@@ -1,0 +1,66 @@
+.poke-card {
+  width: 12rem;
+  background-color: honeydew;
+  overflow: hidden;
+}
+
+.poke-rarity {
+  position: absolute;
+  right: -62px;
+  top: 18px;
+  width: 100%;
+  text-align: center;
+  padding: 0.1rem 0;
+  transform: rotate(40deg);
+
+  span {
+    font-size: 0.7rem;
+  }
+}
+
+.image-container {
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #poke-image {
+    max-height: 10rem;
+  }
+}
+
+#poke-title::first-letter {
+  text-transform: uppercase;
+}
+
+#poke-description {
+  margin: 0.5rem 0;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+#poke-footer {
+  margin: 0.5rem 1rem;
+  span {
+    font-weight: 700;
+  }
+}
+
+.legendary-banner {
+  background-color: gold;
+  color: black;
+  font-weight: 700;
+}
+
+.mythical-banner {
+  background-color: blueviolet;
+  color: white;
+  font-weight: 700;
+}
+
+.common-banner {
+  background-color: chocolate;
+  color: white;
+  font-weight: 700;
+}

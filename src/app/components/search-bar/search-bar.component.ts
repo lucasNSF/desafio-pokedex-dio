@@ -16,8 +16,21 @@ import { PokeApiService } from 'src/app/services/poke-api/poke-api.service';
 export class SearchBarComponent {
   value = '';
   @Output() getPokemon = new EventEmitter<Pokemon>();
+  keyboardEvents: Record<string, () => void> = {
+    Enter: () => this.searchPokemon(),
+    Escape: () => {
+      this.value = '';
+      this.getPokemon.emit();
+    },
+  };
 
   constructor(private pokeApiService: PokeApiService) {}
+
+  handleKeyboardEvent({ key }: KeyboardEvent): void {
+    if (this.keyboardEvents[key]) {
+      this.keyboardEvents[key]();
+    }
+  }
 
   async searchPokemon(): Promise<void> {
     if (!this.value) return;

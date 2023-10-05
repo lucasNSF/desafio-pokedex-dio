@@ -1,4 +1,8 @@
-<input type="text" [(ngModel)]="value" />
+<input
+  type="text"
+  [(ngModel)]="value"
+  (keydown)="handleKeyboardEvent($event)"
+/>
 <button
   [disabled]="!value"
   matSuffix
