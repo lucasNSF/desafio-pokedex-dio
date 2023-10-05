@@ -1,0 +1,16 @@
+.image-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  max-height: 4rem;
+  margin-top: 2rem;
+}
+
+.center-input {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,16 @@
+.search {
+  border-radius: 50px;
+  border: none;
+  padding: 0.5rem 1rem;
+  transition: 0.2s;
+}
+
+.bar {
+  margin-top: 1rem;
+  margin-right: 0.8rem;
+  &:focus {
+    outline: none;
+    border: 2px solid #3f51b5;
+    font-weight: 600;
+  }
+}

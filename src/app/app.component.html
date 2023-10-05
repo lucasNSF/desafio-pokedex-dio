@@ -1,2 +1,8 @@
-<app-search-bar (getPokemon)="handlePokemon($event)"></app-search-bar>
+<div class="image-container">
+  <img src="assets/pokepedia.png" alt="Pokepedia Logo" class="logo" />
+</div>
+<app-search-bar
+  (getPokemon)="handlePokemon($event)"
+  class="center-input"
+></app-search-bar>
 <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>

@@ -2,13 +2,16 @@
   type="text"
   [(ngModel)]="value"
   (keydown)="handleKeyboardEvent($event)"
+  class="search bar"
+  placeholder="Type pokemon's name..."
 />
 <button
   [disabled]="!value"
-  matSuffix
-  mat-icon-button
+  mat-flat-button
+  color="primary"
   aria-label="Search"
   (click)="searchPokemon()"
+  class="search"
 >
-  <mat-icon>search</mat-icon>
+  search
 </button>

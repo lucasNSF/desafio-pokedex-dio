@@ -1,6 +1,15 @@
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 13rem;
+}
+
 .poke-card {
+  position: absolute;
   width: 12rem;
-  background-color: honeydew;
+  background-color: #faf2d3;
   overflow: hidden;
 }
 
@@ -19,7 +28,6 @@
 }
 
 .image-container {
-  background-color: tomato;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,19 +56,19 @@
 }
 
 .legendary-banner {
-  background-color: gold;
-  color: black;
+  background-color: #191d88;
+  color: #fff;
   font-weight: 700;
 }
 
 .mythical-banner {
-  background-color: blueviolet;
-  color: white;
+  background-color: #1450a3;
+  color: #fff;
   font-weight: 700;
 }
 
 .common-banner {
-  background-color: chocolate;
+  background-color: #186f65;
   color: white;
   font-weight: 700;
 }
