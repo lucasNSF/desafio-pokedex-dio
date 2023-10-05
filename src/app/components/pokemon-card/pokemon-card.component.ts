@@ -1,12 +1,7 @@
 import { CommonModule } from '@angular/common';
-import {
-  AfterViewChecked,
-  Component,
-  Input,
-  OnChanges,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { fadeDrop } from 'src/app/animations';
 import { Pokemon } from 'src/app/models/Pokemon';
 import { PokemonDetails } from 'src/app/models/PokemonDetails';
 import { PokeApiService } from 'src/app/services/poke-api/poke-api.service';
@@ -17,6 +12,7 @@ import { PokeApiService } from 'src/app/services/poke-api/poke-api.service';
   imports: [CommonModule, MatCardModule],
   templateUrl: './pokemon-card.component.html',
   styleUrls: ['./pokemon-card.component.scss'],
+  animations: [fadeDrop],
 })
 export class PokemonCardComponent implements OnChanges {
   @Input() pokemon: Pokemon | null = null;
