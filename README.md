@@ -1,27 +1,20 @@
-# Desafio
+# Desafio PokeAPI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+Participando do bootcamp Santander Java + Angular fornecido pela plataforma da Digital Innovation One, este é mais um desafio de projeto da trilha no qual consiste dos seguintes objetivos:
 
-## Development server
+- Criar uma página web com HTML, CSS e Javascript.
+- Utilizar a PokeAPI para compor a sua aplicação.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Resolução do problema e tecnologias utilizadas
 
-## Code scaffolding
+Focando em utilizar uma das stacks que fazem parte do bootcamp, decidi criar uma SPA em Angular voltada para a temática da PokeAPI. Desenvolvi uma app simples que é possível pesquisar pokemons e obter suas respectivas informações em formato de card.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para ir mais além do tema proposto, me desafiei utilizando os recursos mais novos do framework bem como boas práticas de codificação. Segue abaixo uma lista dos recursos que utilizei:
 
-## Build
+- Angular v16.0
+- Angular Material
+- Angular Animations
+- Aplicação utilizando a abordagem de Standalone Components
+- Uso de Typescript e tipagem para o modelo de Pokemon da PokeAPI
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Você pode utilizar a aplicação clicando [neste link!](https://lucasnsf.github.io/desafio-pokedex-dio/)
